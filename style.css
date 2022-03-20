@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.utility {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  height: 100px;
+}
+
+.editor_wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+}
+
+.file_drag,
+.canvas_wrap {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.canvas_wrap {
+  background-color: #fff;
+  border-top: 2px solid #ddd;
+}
+
+.canvas {
+  position: absolute;
+  z-index: 100;
+  /* border: 1px solid #fff; */
+  box-shadow: 0 0 10px #666;
+}
+
+.fileImage {
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+
+.file_drag {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #666;
+}
+
+.file_drag input[type="file"],
+.file_drag_area {
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  cursor: pointer;
+}
+
+.file_drag input[type="file"] {
+  z-index: 10;
+  opacity: 0;
+}
+
+.file_drag_area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  opacity: 100;
+  background-color: #eee;
+  border: 3px dashed #ddd;
+}
+
+label > span {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+label > span::after {
+  content: "";
+  display: inline-block;
+  width: 5px;
+}
+
+button {
+  width: 100px;
+  height: 30px;
+}
+
+.hidden {
+  display: none;
+}

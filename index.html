@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Photo Drawing</title>
+</head>
+<body>
+    <section>
+        <div class="utility">
+            <label>
+                <span>펜</span>
+                <input type="color" value="#000" class="js-pen">
+            </label>
+            <label>
+                <span>사이즈</span>
+                <input type="range" min="1" max="20" value="7" step="1" class="js-size">
+            </label>
+            <button type="button" class="js-clear">초기화</button>
+            <button type="button" class="js-save">저장</button>
+        </div>
+        <div class="editor_wrap">
+            <div class="canvas_wrap">
+                <canvas class="canvas hidden"></canvas>
+                <!-- <img src="#" alt="" class="fileImage"> -->
+            </div>
+            <div class="file_drag">
+                <input type="file">
+                <div class="file_drag_area">이미지를 드래그 앤 드롭 하세요.</div>
+            </div>
+        </div>
+    </section>
+    <script src="./index.js"></script>
+</body>
+</html>
